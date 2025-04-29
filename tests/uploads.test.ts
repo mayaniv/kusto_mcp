@@ -1,6 +1,6 @@
 import fs from 'fs';
-import type { ResponseLike } from 'kusto-mcp/internal/to-file';
-import { toFile } from 'kusto-mcp/core/uploads';
+import type { ResponseLike } from 'kusto-dm-mcp/internal/to-file';
+import { toFile } from 'kusto-dm-mcp/core/uploads';
 import { File } from 'node:buffer';
 
 class MyClass {
@@ -97,7 +97,7 @@ describe('missing File error message', () => {
   });
 
   test('is thrown', async () => {
-    const uploads = await import('kusto-mcp/core/uploads');
+    const uploads = await import('kusto-dm-mcp/core/uploads');
     await expect(
       uploads.toFile(mockResponse({ url: 'https://example.com/my/audio.mp3' })),
     ).rejects.toMatchInlineSnapshot(
