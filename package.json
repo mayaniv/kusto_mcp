@@ -1,6 +1,6 @@
 {
   "name": "kusto-dm-mcp",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.1",
   "description": "The official TypeScript library for the Kusto API",
   "author": "Kusto <>",
   "types": "dist/index.d.ts",
