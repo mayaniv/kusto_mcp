@@ -4,14 +4,14 @@ import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { endpoints, HandlerFunction } from './tools';
 import { CallToolRequestSchema, ListToolsRequestSchema, Tool } from '@modelcontextprotocol/sdk/types.js';
-import Kusto from 'kusto-mcp';
+import Kusto from 'kusto-dm-mcp';
 export { endpoints } from './tools';
 
 // Create server instance
 export const server = new McpServer(
   {
-    name: 'kusto_mcp_api',
-    version: '0.0.1-alpha.0',
+    name: 'kusto_dm_mcp_api',
+    version: '0.1.0-alpha.1',
   },
   {
     capabilities: {

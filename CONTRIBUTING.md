@@ -55,12 +55,12 @@ $ cd kusto_mcp
 # With yarn
 $ yarn link
 $ cd ../my-package
-$ yarn link kusto-mcp
+$ yarn link kusto-dm-mcp
 
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global kusto-mcp
+$ pnpm link -—global kusto-dm-mcp
 ```
 
 ## Running tests

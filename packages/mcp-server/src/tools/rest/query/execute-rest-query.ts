@@ -2,7 +2,7 @@
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../../';
-import Kusto from 'kusto-mcp';
+import Kusto from 'kusto-dm-mcp';
 
 export const metadata: Metadata = {
   resource: 'rest.query',

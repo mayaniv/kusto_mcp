@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Kusto from 'kusto-mcp';
+import Kusto from 'kusto-dm-mcp';
 
 const client = new Kusto({
   cluster: 'My-Cluster',

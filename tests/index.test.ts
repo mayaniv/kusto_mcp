@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'kusto-mcp/core/api-promise';
+import { APIPromise } from 'kusto-dm-mcp/core/api-promise';
 
 import util from 'node:util';
-import Kusto from 'kusto-mcp';
-import { APIUserAbortError } from 'kusto-mcp';
+import Kusto from 'kusto-dm-mcp';
+import { APIUserAbortError } from 'kusto-dm-mcp';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {
