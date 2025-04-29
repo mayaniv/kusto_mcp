@@ -13,7 +13,6 @@ export class Query extends APIResource {
     const {
       accept,
       acceptEncoding,
-      authorization,
       host,
       app,
       clientRequestId,
@@ -33,7 +32,6 @@ export class Query extends APIResource {
         {
           accept: accept.toString(),
           acceptEncoding: acceptEncoding.toString(),
-          authorization: authorization,
           host: host,
           ...(app != null ? { app: app } : undefined),
           ...(clientRequestId != null ? { clientRequestId: clientRequestId } : undefined),
@@ -57,7 +55,6 @@ export class Query extends APIResource {
     const {
       accept,
       acceptEncoding,
-      authorization,
       host,
       app,
       clientRequestId,
@@ -78,7 +75,6 @@ export class Query extends APIResource {
           'Content-Type': 'application/json;charset=utf-8',
           accept: accept.toString(),
           acceptEncoding: acceptEncoding.toString(),
-          authorization: authorization,
           host: host,
           ...(app != null ? { app: app } : undefined),
           ...(clientRequestId != null ? { clientRequestId: clientRequestId } : undefined),
@@ -158,11 +154,6 @@ export interface QueryRetrieveParams {
    * Header param: The Accept-Encoding header
    */
   acceptEncoding: 'gzip' | 'deflate';
-
-  /**
-   * Header param: The Authorization header
-   */
-  authorization: string;
 
   /**
    * Header param: The Host header. Set to the qualified domain name that the request
@@ -245,11 +236,6 @@ export interface QueryExecuteParams {
    * Header param: The Accept-Encoding header
    */
   acceptEncoding: 'gzip' | 'deflate';
-
-  /**
-   * Header param: The Authorization header
-   */
-  authorization: string;
 
   /**
    * Header param: The Host header. Set to the qualified domain name that the request

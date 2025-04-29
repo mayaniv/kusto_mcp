@@ -14,7 +14,6 @@ describe('resource query', () => {
       csl: 'csl',
       accept: 'application/json',
       acceptEncoding: 'gzip',
-      authorization: 'authorization',
       host: 'host',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +31,6 @@ describe('resource query', () => {
       csl: 'csl',
       accept: 'application/json',
       acceptEncoding: 'gzip',
-      authorization: 'authorization',
       host: 'host',
       db: 'db',
       properties: 'properties',
@@ -54,7 +52,6 @@ describe('resource query', () => {
       csl: 'csl',
       accept: 'application/json',
       acceptEncoding: 'gzip',
-      authorization: 'authorization',
       host: 'host',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -72,7 +69,6 @@ describe('resource query', () => {
       csl: 'csl',
       accept: 'application/json',
       acceptEncoding: 'gzip',
-      authorization: 'authorization',
       host: 'host',
       db: 'db',
       properties: 'properties',

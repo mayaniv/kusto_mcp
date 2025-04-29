@@ -28,9 +28,6 @@ export const tool: Tool = {
         type: 'string',
         enum: ['gzip', 'deflate'],
       },
-      authorization: {
-        type: 'string',
-      },
       host: {
         type: 'string',
       },

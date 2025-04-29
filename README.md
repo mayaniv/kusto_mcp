@@ -25,14 +25,15 @@ The full API of this library can be found in [api.md](api.md).
 ```js
 import Kusto from 'kusto';
 
-const client = new Kusto();
+const client = new Kusto({
+  cluster: process.env['KUSTO_CLUSTER'], // This is the default and can be omitted
+});
 
 async function main() {
   const queries = await client.rest.query.retrieve({
     csl: 'csl',
     accept: 'application/json',
     acceptEncoding: 'gzip',
-    authorization: 'authorization',
     host: 'host',
   });
 }
@@ -48,14 +49,15 @@ This library includes TypeScript definitions for all request params and response
 ```ts
 import Kusto from 'kusto';
 
-const client = new Kusto();
+const client = new Kusto({
+  cluster: process.env['KUSTO_CLUSTER'], // This is the default and can be omitted
+});
 
 async function main() {
   const params: Kusto.Rest.QueryRetrieveParams = {
     csl: 'csl',
     accept: 'application/json',
     acceptEncoding: 'gzip',
-    authorization: 'authorization',
     host: 'host',
   };
   const queries: Kusto.Rest.QueryRetrieveResponse = await client.rest.query.retrieve(params);
@@ -76,13 +78,7 @@ a subclass of `APIError` will be thrown:
 ```ts
 async function main() {
   const queries = await client.rest.query
-    .retrieve({
-      csl: 'csl',
-      accept: 'application/json',
-      acceptEncoding: 'gzip',
-      authorization: 'authorization',
-      host: 'host',
-    })
+    .retrieve({ csl: 'csl', accept: 'application/json', acceptEncoding: 'gzip', host: 'host' })
     .catch(async (err) => {
       if (err instanceof Kusto.APIError) {
         console.log(err.status); // 400
@@ -122,12 +118,11 @@ You can use the `maxRetries` option to configure or disable this:
 ```js
 // Configure the default for all requests:
 const client = new Kusto({
-  cluster: 'My-Cluster',
   maxRetries: 0, // default is 2
 });
 
 // Or, configure per-request:
-await client.rest.query.retrieve({ csl: 'csl', accept: 'application/json', acceptEncoding: 'gzip', authorization: 'authorization', host: 'host' }, {
+await client.rest.query.retrieve({ csl: 'csl', accept: 'application/json', acceptEncoding: 'gzip', host: 'host' }, {
   maxRetries: 5,
 });
 ```
@@ -140,12 +135,11 @@ Requests time out after 1 minute by default. You can configure this with a `time
 ```ts
 // Configure the default for all requests:
 const client = new Kusto({
-  cluster: 'My-Cluster',
   timeout: 20 * 1000, // 20 seconds (default is 1 minute)
 });
 
 // Override per-request:
-await client.rest.query.retrieve({ csl: 'csl', accept: 'application/json', acceptEncoding: 'gzip', authorization: 'authorization', host: 'host' }, {
+await client.rest.query.retrieve({ csl: 'csl', accept: 'application/json', acceptEncoding: 'gzip', host: 'host' }, {
   timeout: 5 * 1000,
 });
 ```
@@ -169,25 +163,13 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 const client = new Kusto();
 
 const response = await client.rest.query
-  .retrieve({
-    csl: 'csl',
-    accept: 'application/json',
-    acceptEncoding: 'gzip',
-    authorization: 'authorization',
-    host: 'host',
-  })
+  .retrieve({ csl: 'csl', accept: 'application/json', acceptEncoding: 'gzip', host: 'host' })
   .asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
 const { data: queries, response: raw } = await client.rest.query
-  .retrieve({
-    csl: 'csl',
-    accept: 'application/json',
-    acceptEncoding: 'gzip',
-    authorization: 'authorization',
-    host: 'host',
-  })
+  .retrieve({ csl: 'csl', accept: 'application/json', acceptEncoding: 'gzip', host: 'host' })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(queries);
