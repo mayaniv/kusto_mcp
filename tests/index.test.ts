@@ -619,6 +619,7 @@ describe('retries', () => {
 
     const client = new Kusto({ cluster: 'My-Cluster', fetch: testFetch });
 
+    //test
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);
     expect(
