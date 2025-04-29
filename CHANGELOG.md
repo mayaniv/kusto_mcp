@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-04-29)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/mayaniv/kusto_mcp/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* update SDK settings ([f2af9e5](https://github.com/mayaniv/kusto_mcp/commit/f2af9e5989d480af9dc090009c6b5e32815cd6f1))
+
 ## 0.1.0-alpha.1 (2025-04-29)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/mayaniv/kusto_mcp/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)

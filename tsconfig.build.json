@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "kusto-mcp/*": ["dist/src/*"],
-      "kusto-mcp": ["dist/src/index.ts"],
+      "kusto-dm-mcp/*": ["dist/src/*"],
+      "kusto-dm-mcp": ["dist/src/index.ts"],
     },
     "noEmit": false,
     "declaration": true,

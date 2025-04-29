@@ -23,7 +23,7 @@ For clients with a configuration JSON, it might look something like this:
 ```json
 {
   "mcpServers": {
-    "kusto_mcp_api": {
+    "kusto_dm_mcp_api": {
       "command": "npx",
       "args": ["-y", "kusto-mcp"],
       "env": {
