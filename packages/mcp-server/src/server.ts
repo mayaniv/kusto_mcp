@@ -11,7 +11,7 @@ export { endpoints } from './tools';
 export const server = new McpServer(
   {
     name: 'kusto_dm_mcp_api',
-    version: '0.1.0-alpha.2',
+    version: '0.1.1',
   },
   {
     capabilities: {
