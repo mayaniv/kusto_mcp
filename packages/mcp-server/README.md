@@ -9,8 +9,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:stainless-sdks/kusto-typescript.git
-cd kusto-typescript
+git clone git@github.com:mayaniv/kusto_mcp.git
+cd kusto_mcp
 yarn && ./scripts/build-all
 ```
 
@@ -39,7 +39,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "kusto_api": {
       "command": "npx",
-      "args": ["-y", "/path/to/local/kusto-typescript/packages/mcp-server"],
+      "args": ["-y", "/path/to/local/kusto_mcp/packages/mcp-server"],
       "env": {
         "KUSTO_CLUSTER": "My-Cluster"
       }
