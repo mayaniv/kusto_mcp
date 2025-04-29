@@ -25,7 +25,7 @@ export default tseslint.config(
         {
           patterns: [
             {
-              regex: '^kusto(/.*)?',
+              regex: '^kusto-mcp(/.*)?',
               message: 'Use a relative import, not a package import.',
             },
           ],

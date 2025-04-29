@@ -9,8 +9,8 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "kusto/*": ["src/*"],
-      "kusto": ["src/index.ts"]
+      "kusto-mcp/*": ["src/*"],
+      "kusto-mcp": ["src/index.ts"]
     },
     "noEmit": true,
 

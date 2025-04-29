@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'kusto/internal/uploads';
-import { toFile } from 'kusto/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'kusto-mcp/internal/uploads';
+import { toFile } from 'kusto-mcp/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {
