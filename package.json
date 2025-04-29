@@ -1,5 +1,5 @@
 {
-  "name": "kusto",
+  "name": "kusto-mcp",
   "version": "0.0.1-alpha.0",
   "description": "The official TypeScript library for the Kusto API",
   "author": "Kusto <>",
@@ -54,8 +54,8 @@
     "./internal/shims/getBuiltinModule.js": "./internal/shims/nullGetBuiltinModule.js"
   },
   "imports": {
-    "kusto": ".",
-    "kusto/*": "./src/*"
+    "kusto-mcp": ".",
+    "kusto-mcp/*": "./src/*"
   },
   "exports": {
     ".": {
