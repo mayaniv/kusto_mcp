@@ -4,7 +4,7 @@ const parentPkgJson = require('../../../package.json');
 
 for (const dep in pkgJson.dependencies) {
   // ensure we point to NPM instead of a local directory
-  if (dep === 'kusto') {
+  if (dep === 'kusto-mcp') {
     pkgJson.dependencies[dep] = '^' + parentPkgJson.version;
   }
 }

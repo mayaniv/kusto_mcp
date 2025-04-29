@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Kusto from 'kusto';
+import Kusto from 'kusto-mcp';
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 
 import retrieve_rest_query from './rest/query/retrieve-rest-query';

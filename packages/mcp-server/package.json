@@ -22,7 +22,7 @@
     "fix": "eslint --fix --ext ts,js ."
   },
   "dependencies": {
-    "kusto": "file:../../dist/",
+    "kusto-mcp": "file:../../dist/",
     "@modelcontextprotocol/sdk": "^1.6.1",
     "yargs": "^17.7.2"
   },
