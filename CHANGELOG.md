@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.3.0 (2025-05-07)
+
+Full Changelog: [v0.2.0...v0.3.0](https://github.com/mayaniv/kusto_mcp/compare/v0.2.0...v0.3.0)
+
+### Features
+
+* **client:** add withOptions helper ([492b6fc](https://github.com/mayaniv/kusto_mcp/commit/492b6fce828308c9c5f8583d680afe55b369308b))
+* more gracefully handle $refs and work around schema limitations ([7094857](https://github.com/mayaniv/kusto_mcp/commit/7094857faf8814188a747f78d95a004cfd8fd9a9))
+
+
+### Bug Fixes
+
+* **mcp:** remove ajv dependency so MCP servers are more compatible with Cloudflare Workers ([b8edf9e](https://github.com/mayaniv/kusto_mcp/commit/b8edf9ee641367a3d7d288eaa20bacacb418b7e3))
+
+
+### Chores
+
+* **client:** drop support for EOL node versions ([0b7194e](https://github.com/mayaniv/kusto_mcp/commit/0b7194efa08d337f8bfb126a9c1b90fb407a2985))
+* **internal:** codegen related update ([34957bf](https://github.com/mayaniv/kusto_mcp/commit/34957bf54249cb900f39a52f76c793fa18722b9a))
+* **internal:** share typescript helpers ([5fa911e](https://github.com/mayaniv/kusto_mcp/commit/5fa911e4aae9c50da90b845ea80a3e71b47a49b8))
+
+
+### Documentation
+
+* **readme:** fix typo ([c50eed5](https://github.com/mayaniv/kusto_mcp/commit/c50eed57a7a9ed140c13d7cea7bc17b99b3632ea))
+
 ## 0.2.0 (2025-04-29)
 
 Full Changelog: [v0.1.1...v0.2.0](https://github.com/mayaniv/kusto_mcp/compare/v0.1.1...v0.2.0)
