@@ -6,7 +6,7 @@
     "rootDir": "./dist/src",
     "paths": {
       "kusto-dm-mcp/*": ["dist/src/*"],
-      "kusto-dm-mcp": ["dist/src/index.ts"],
+      "kusto-dm-mcp": ["dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,
